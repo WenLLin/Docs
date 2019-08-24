@@ -1,0 +1,30 @@
+﻿.login {
+    text-align: right;
+    border-bottom: 3px black solid;
+    margin-bottom: 1.5em;
+}
+
+.category {
+    text-align: center;
+    border-bottom: 3px black solid;
+    margin-bottom: 1.5em;
+}
+.search {
+    text-align: right;
+}
+
+main > section > h1 {
+    text-align: center;
+}
+
+.link {
+    text-align: right;
+}
+body > footer {
+    font-size: 1.2em;
+    font-style: italic;
+    border-top: 3px black solid;
+    margin-top: 1.5em;
+    padding: 0.25em 0;
+    text-align: right;
+}
