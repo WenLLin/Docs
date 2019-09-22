@@ -1,22 +1,30 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet"
           asp-href-include="twitter-bootstrap/**/*.min.css"
           asp-href-exclude="**/*-reboot*,**/*-grid*" />
-    <title>SportsStore</title>
+    <link rel="stylesheet" asp-href-include="/lib/fontawesome/css/*.css" />
+    <title>POCS</title>
 </head>
 <body>
-        <div class="navbar navbar-inverse bg-inverse" role="navigation">
-            <a class="navbar-brand" href="#">SPORTS STORE</a>
+    <div class="navbar navbar-inverse bg-inverse" role="navigation">
+        <div class="row">
+            <a class="col navbar-brand" href="#">POCS</a>
+            <div class="col-4 text-center">
+                @await Component.InvokeAsync("CartSummary")
+            </div>
         </div>
+    </div>
 
         <div class="row m-1 p-1">
             <div id="categories" class="col-3">
-                Put something useful here later
+                @await Component.InvokeAsync("NavigationMenu")
             </div>
 
+            @*<nav id=" categories" class="col-3"> <vc:navigation-menu></nav>*@
             <div class="col-9">
                 @RenderBody()
             </div>

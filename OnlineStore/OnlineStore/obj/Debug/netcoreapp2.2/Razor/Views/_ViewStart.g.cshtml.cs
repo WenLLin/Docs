@@ -23,8 +23,13 @@ using OnlineStore.Models.ViewModels;
 
 #line default
 #line hidden
+#line 5 "C:\Users\kensk\OneDrive\Desktop\MSSA\Projects\CourseProject\docs\OnlineStore\OnlineStore\Views\_ViewImports.cshtml"
+using OnlineStore.Infrastructure;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"77a2804b95fd303a20a56ec194ea6ca59278fafa", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eaa3f2ecc62dab1970212be85913077d718bb244", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f706131288bddd0661e11d14517829f024f38464", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

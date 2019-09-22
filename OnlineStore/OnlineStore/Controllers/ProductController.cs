@@ -14,21 +14,28 @@ namespace OnlineStore.Controllers
             repository = repo;
         }
 
-        public ViewResult List(int productPage = 1)
-            => View(new ProductsListViewModel
+        public ViewResult List(string category, int productPage = 1)
+        {
+            return View(new ProductsListViewModel
             {
                 Products = repository.Products
-                                     .OrderBy(p => p.ProductID)
-                                     .Skip((productPage - 1) * PageSize)
-                                     .Take(PageSize),
+                                              .Where(p => category == null || p.Category == category)
+                                              .OrderBy(p => p.ProductID)
+                                              .Skip((productPage - 1) * PageSize)
+                                              .Take(PageSize),
 
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = productPage,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Products.Count()
-                }
-            }              
-         );
+                    //Displaying correct page number for each category
+                    TotalItems = category == null ?
+                        repository.Products.Count() :
+                        repository.Products.Where(e =>
+                            e.Category == category).Count()
+                },
+            CurrentCategory = category
+        });
+        }
     }
 }
